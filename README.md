@@ -5,7 +5,7 @@ R scripts for the statistical processing of NNImageProcessing outputs
 1. Pick the corresponding R script that matches the experiment type. 
 There is a script for one experiment with multiple treatments(One_Experiment.R), 
 one script for a single treatment(One_Treatment.R), 
-and one script for getting one cell metrics at a time(One_Metric.R). One_Experiment_PP.R was used in the PombePhenosizer paper.
+and one script for getting one cell metrics at a time(One_Metric.R). One_Treatment_PP.R was used in the PombePhenosizer paper.
 2. Open the script using Rstudio and alter the path to the csv files
 3. Run the script and the directory should contain an graph that showcases the metrics
 

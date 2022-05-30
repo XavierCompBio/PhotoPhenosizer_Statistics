@@ -1,4 +1,4 @@
-# NNImageProcessing_Stats
+# PombePhenosizer_Statistics
 R scripts for the statistical processing of NNImageProcessing outputs
 
 # Instructions

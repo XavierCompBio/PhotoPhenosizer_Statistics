@@ -1,5 +1,5 @@
-# PombePhenosizer_Statistics
-R scripts for the statistical processing of NNImageProcessing outputs
+# Photo Phenosizer Statistical Pipeline
+R scripts for the statistical processing of Photo Phenosizer outputs
 
 # Instructions
 1. Pick the corresponding R script that matches the experiment type. 

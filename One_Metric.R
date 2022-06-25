@@ -21,10 +21,10 @@ cvq = function(x){
   return(100*(qs[2] - qs[1])/(qs[2] + qs[1]))
 }
 
-## Load NT data
+## Load Non-Treatment data
 grp = "NT"
 nt_data = NULL
-file_path = paste0("/Users/martinvo/Documents/NNImageProcessing Files/HUvsUVvsMMS/NT")
+file_path = paste0(<Insert File Path Here>)
 
 ## List of CSV files
 file_list = list.files(path = file_path, pattern="*.csv")
@@ -50,10 +50,10 @@ nt_data$widthEllipse = 0.12581*nt_data$widthEllipse
 
 
 
-## Load HU data
-grp = "HU"
+## Load Treatment 1 data
+grp = <Insert Treatment 1 Label Here>
 hu_data = NULL
-file_path = paste0("/Users/martinvo/Documents/NNImageProcessing Files/HUvsUVvsMMS/HU")
+file_path = paste0(<Insert Treatment 1 CSV File Path Here>)
   
   ## List of CSV files
   file_list = list.files(path = file_path, pattern="*.csv")
@@ -78,10 +78,10 @@ hu_data$lengthEllipse = 0.12581*hu_data$lengthEllipse
 hu_data$widthEllipse = 0.12581*hu_data$widthEllipse
 
 
-## Load MMS data
-grp = "MMS"
+## Load Treatment 2 data
+grp = <Insert Treatment 2 Label Here>
 mms_data = NULL
-file_path = paste0("/Users/martinvo/Documents/NNImageProcessing Files/HUvsUVvsMMS/MMS")
+file_path = paste0(<Insert Treatment 2 CSV File Path Here>)
 
 ## List of CSV files
 file_list = list.files(path = file_path, pattern="*.csv")
@@ -107,10 +107,10 @@ mms_data$widthEllipse = 0.12581*mms_data$widthEllipse
 
 
 
-## Load UV data
-grp = "UV"
+## Load Treatment 3 data
+grp = <Insert Treatment 3 Label Here>
 uv_data = NULL
-file_path = paste0("/Users/martinvo/Documents/NNImageProcessing Files/HUvsUVvsMMS/UV")
+file_path = paste0(<Insert Treatment 3 CSV File Path Here>)
 
 ## List of CSV files
 file_list = list.files(path = file_path, pattern="*.csv")
@@ -145,6 +145,7 @@ lp = ggplot(full_all, aes(x = lengthEllipse, color = condition)) + geom_density(
 wp = ggplot(full_all, aes(x = widthEllipse, color = condition)) + geom_density(lwd = 1.3, adjust = 1.4) + 
   theme_minimal() + labs(x = "Width", y = " ") + scale_x_continuous(limits = c(1.5,6.75))
 
-png("width(HUvsMMSvsUVvsNT).png", h=8, w=11, units = 'in', res = 300)
+png(<Name of Image Here>, h=8, w=11, units = 'in', res = 300)
+### Replace the wp for ap or lp when needed
 grid.arrange(wp)
 dev.off()

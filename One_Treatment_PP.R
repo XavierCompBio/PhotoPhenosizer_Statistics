@@ -30,7 +30,7 @@ cvq = function(x){
 }
 
 ## Path where the EXP csvs are located
-file_path = "/Users/martinvo/Documents/NNImageProcessing Files/NNImageProcessing"
+file_path = <Insert File Path Here>
 
 ## List of CSV files
 file_list = list.files(path = file_path, pattern="*.csv")
@@ -42,7 +42,8 @@ for(i in 1:length(file_list)){
   if(length(count.fields(paste0(file_path, "/", file_list[i]))) > 1){
     
     temp_data = read.csv(paste0(file_path, "/", file_list[i]))
-    temp_data$condition = ifelse(str_detect(file_list[i], pattern = "NT"), "NT", "T")
+    temp_data$condition = ifelse(str_detect(file_list[i], pattern = <"Insert Label of First Treatment Group">), 
+                                 <"Insert Label of First Treatment Group">, <"Insert Label of Second Treatment Group">)
     temp_data = data.frame(image = i, temp_data)
     uv_nt = rbind(uv_nt, temp_data)
   }

@@ -42,8 +42,8 @@ for(i in 1:length(file_list)){
   if(length(count.fields(paste0(file_path, "/", file_list[i]))) > 1){
     
     temp_data = read.csv(paste0(file_path, "/", file_list[i]))
-    temp_data$condition = ifelse(str_detect(file_list[i], pattern = <"Insert Label of First Treatment Group">), 
-                                 <"Insert Label of First Treatment Group">, <"Insert Label of Second Treatment Group">)
+    temp_data$condition = ifelse(str_detect(file_list[i], pattern = "<Insert Label of First Treatment Group>"), 
+                                 "<Insert Label of First Treatment Group>", "<Insert Label of Second Treatment Group>")
     temp_data = data.frame(image = i, temp_data)
     uv_nt = rbind(uv_nt, temp_data)
   }
@@ -108,6 +108,6 @@ p3 = ggplot(uv_nt, aes(x = widthEllipse, color = condition)) + geom_density(lwd 
   theme_minimal() + scale_x_continuous(limits = c(1,5)) + labs(x = "Width", y = " ") +
   scale_color_manual(values=c("blue","red")) 
 
-png("dens.png", width = 8, height = 2.5, unit = "in", res = 300)
+png("<Insert Image Filename Here>", width = 8, height = 2.5, unit = "in", res = 300)
 ggarrange(p1, p2, p3, ncol=3, nrow=1, common.legend = TRUE, legend="right")
 dev.off()

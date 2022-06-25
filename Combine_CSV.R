@@ -22,9 +22,9 @@ cvq = function(x){
 }
 
 ## Load data
-grp = "NT"
+grp = "<Insert Treatment Label Here>"
 nt_data = NULL
-file_path = paste0("/Users/martinvo/Library/CloudStorage/OneDrive-XavierUniversity/Escorcia Lab/Summer_2022_Pombe/MMSvsNT_A/2025525_527_MMSvsNT_A/T_NR/T_NR_CSV")
+file_path = paste0("<Insert Filepath Here>")
 ## List of CSV files
 file_list = list.files(path = file_path, pattern="*.csv")
 
@@ -41,15 +41,8 @@ for(i in 1:length(file_list)){
   }
 }
 
-
-### Convert to microns
-# nt_data$area = (0.12581^2)*nt_data$area
-# nt_data$lengthEllipse = 0.12581*nt_data$lengthEllipse
-# nt_data$widthEllipse = 0.12581*nt_data$widthEllipse
-
 ## write to excel
 library(writexl)
-write_xlsx(nt_data, "/Users/martinvo/Library/CloudStorage/OneDrive-XavierUniversity/Escorcia Lab/Summer_2022_Pombe/MMSvsNT_A/2025525_527_MMSvsNT_A/csv_combined/T_NR_total.xlsx")
-
+write_xlsx(nt_data, "<Insert Filepath To Empty Excel File>")
 
 

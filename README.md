@@ -12,4 +12,4 @@ R scripts for the statistical processing of Photo Phenosizer outputs
 
 R scripts are meant to be a guide. One can edit the script to accomodate one's need for statistical purposes.
 
-*Currently work in progress before initial release*
+*Currently work in progress before initial release, however the scripts work for experimental purposes*

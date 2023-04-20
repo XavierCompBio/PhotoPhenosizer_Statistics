@@ -50,9 +50,9 @@ for(i in 1:length(file_list)){
 }
 
 ### Convert to microns
-uv_nt$area = (0.12581^2)*uv_nt$area
-uv_nt$lengthEllipse = 0.12581*uv_nt$lengthEllipse
-uv_nt$widthEllipse = 0.12581*uv_nt$widthEllipse
+uv_nt$area = (0.12581^2)*uv_nt$Area
+uv_nt$lengthEllipse = 0.12581*uv_nt$Feret
+uv_nt$widthEllipse = 0.12581*uv_nt$MinFeret
 
 ## Summary table (area)
 area_sum = uv_nt %>% group_by(condition) %>% summarize(N = n(),
